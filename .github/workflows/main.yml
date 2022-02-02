@@ -19,13 +19,9 @@ jobs:
       matrix:
         os:
           - ubuntu-20.04
-          - windows-latest
           
         engine:
-          - "css"
           - "csgo"
-          - "tf2"
-          - "l4d2"
           
         sm_version:
           - "1.10"
@@ -82,7 +78,7 @@ jobs:
       - name: Checking out HL2SDK
         uses: actions/checkout@v2
         with:
-          repository: alliedmodders/hl2sdk
+          repository: Wend4r/hl2sdk
           ref: ${{ matrix.engine }}
           path: hl2sdk-${{ matrix.engine }}
           submodules: recursive
